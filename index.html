@@ -361,6 +361,36 @@
   }
   .footer-logo { font-family: 'Fraunces', serif; font-style: italic; font-size: 14px; color: var(--text-muted); }
 
+  /* ============ RATES ============ */
+  .rates-section { padding: 64px 0; }
+  .rates-head { text-align: center; margin-bottom: 10px; }
+  .rates-head h2 { font-family: 'Fraunces', serif; font-weight: 900; font-size: 32px; }
+  .rates-intro { text-align: center; font-size: 16px; color: var(--text-muted); margin: 12px 0 40px; }
+  .rates-sub { font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px; color: var(--text-primary); margin: 0 0 18px; }
+  .rates-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 36px; }
+  .rate-card {
+    display: flex; flex-direction: column; gap: 10px; padding: 24px;
+    border-radius: 16px; background: var(--bg-neutral); border: 1px solid var(--border-soft);
+  }
+  .rate-card.rate-popular {
+    border-color: var(--accent); background: #fff;
+    box-shadow: 0 4px 20px rgba(92,131,104,0.12);
+  }
+  .rate-badge {
+    align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; color: #fff; background: var(--accent);
+    border-radius: 20px; padding: 3px 10px;
+  }
+  .rate-name { font-family: 'Fraunces', serif; font-weight: 700; font-size: 18px; color: var(--text-primary); }
+  .rate-addon {
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; color: var(--text-muted);
+    background: var(--border-soft); border-radius: 10px; padding: 2px 8px;
+    vertical-align: middle; margin-left: 6px;
+  }
+  .rate-desc { font-size: 14px; color: var(--text-muted); line-height: 1.55; flex: 1; }
+  .rate-price { font-family: 'Fraunces', serif; font-weight: 900; font-size: 22px; color: var(--accent-dark); margin-top: 4px; }
+  .rates-note { text-align: center; font-size: 13px; color: var(--text-faint); font-style: italic; margin-top: 4px; }
+
   /* ============ RESPONSIVE ============ */
   @media (max-width: 1000px) {
     .phone-small { width: 108px; height: 218px; left: -62px; }
@@ -405,6 +435,10 @@
     .who-head h2 { font-size: 24px; }
     .who-hook { font-size: 14px; padding: 0 10px; }
     .who-grid { grid-template-columns: 1fr; }
+
+    .rates-section { padding: 48px 0; }
+    .rates-head h2 { font-size: 24px; }
+    .rates-grid { grid-template-columns: 1fr; }
 
     .contact-section { padding: 50px 0 36px; }
     .contact-section h2 { font-size: 26px; }
@@ -649,6 +683,55 @@
           <span class="sidekick-sub">If your audience is parents of 8–12-year-olds, we've already got the cast. (His rate: Robux or snacks.)</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ RATES & PACKAGES ============ -->
+  <section class="rates-section">
+    <div class="wrap">
+      <div class="rates-head"><h2>Rates &amp; Packages</h2></div>
+      <p class="rates-intro">Starting rates — custom packages available on request.</p>
+
+      <h3 class="rates-sub">Video</h3>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div class="rate-name">Single Video</div>
+          <div class="rate-desc">Filmed and edited, VO included, organic use 30–90 days</div>
+          <div class="rate-price">$150</div>
+        </div>
+        <div class="rate-card rate-popular">
+          <div class="rate-badge">Most popular</div>
+          <div class="rate-name">3-Video Bundle</div>
+          <div class="rate-desc">3 videos, mixed formats, organic use 30–90 days</div>
+          <div class="rate-price">$400</div>
+        </div>
+        <div class="rate-card">
+          <div class="rate-name">Paid Ad Usage <span class="rate-addon">add-on</span></div>
+          <div class="rate-desc">Extends usage rights for paid ads, per 30 days</div>
+          <div class="rate-price">+40% of base</div>
+        </div>
+      </div>
+
+      <h3 class="rates-sub">Photo &amp; Carousel</h3>
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div class="rate-name">Single Photo</div>
+          <div class="rate-desc">1 edited UGC-style photo</div>
+          <div class="rate-price">$50</div>
+        </div>
+        <div class="rate-card">
+          <div class="rate-name">Photo Set</div>
+          <div class="rate-desc">5 edited photos, mixed shots and angles</div>
+          <div class="rate-price">$120</div>
+        </div>
+        <div class="rate-card">
+          <div class="rate-name">Carousel (5–8 slides)</div>
+          <div class="rate-desc">Cohesive multi-slide story or how-to, edited and captioned</div>
+          <div class="rate-price">$180</div>
+        </div>
+      </div>
+
+      <p class="rates-note">Rates reflect early-stage pricing and will be updated as my portfolio grows.</p>
     </div>
   </section>
 
