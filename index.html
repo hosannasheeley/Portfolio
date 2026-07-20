@@ -183,33 +183,19 @@
   }
 
   /* ============ WHY WORK WITH ME ============ */
-  .why-section { background: var(--bg-neutral); padding: 64px 0 60px; }
-  .why-head { text-align: center; margin-bottom: 36px; }
   .eyebrow {
     font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--accent); font-weight: 600; margin-bottom: 14px;
   }
-  .why-head h2 { font-family: 'Fraunces', serif; font-weight: 900; font-size: 34px; }
 
-  .why-stage { position: relative; display: flex; justify-content: center; }
-  .why-video {
-    width: 440px; max-width: 100%; aspect-ratio: 1/1;
-    border-radius: 26px; position: relative; overflow: hidden;
-    box-shadow: 0 28px 56px rgba(60,50,40,0.2);
-    background: var(--text-primary);
-  }
-  .why-video iframe, .why-video video {
-    position: absolute; inset: 0; width: 100%; height: 100%; border: none;
-  }
-  .why-video-placeholder {
-    position: absolute; inset: 0;
-    background: linear-gradient(150deg, #B8CBAE 0%, #5C8368 55%, #3E5C4A 100%);
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,0.7); font-size: 13px; text-align: center; padding: 20px;
+  .who-intro-video { display: block; max-width: 420px; width: 100%; margin: 0 auto 0; border-radius: 16px; }
+  .who-badges {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    max-width: 560px; margin: 24px auto 36px; gap: 20px; padding: 0 10px;
   }
 
   .stat-badge {
-    position: absolute; background: #fff; border-radius: 16px;
+    background: #fff; border-radius: 16px;
     padding: 14px 18px; box-shadow: 0 12px 30px rgba(60,50,40,0.15);
     text-align: left; max-width: 190px;
   }
@@ -221,8 +207,6 @@
     background: var(--accent-soft); display: flex; align-items: center; justify-content: center;
   }
   .stat-icon svg { width: 10px; height: 10px; color: var(--accent); }
-  .badge-years { top: 4%; left: 2%; transform: rotate(-4deg); }
-  .badge-followers { bottom: 4%; right: 0%; transform: rotate(3deg); }
 
   /* ============ PORTFOLIO ============ */
   .portfolio-section { padding: 64px 0 56px; }
@@ -416,14 +400,11 @@
     .platform-tags { justify-content: center; }
     .platforms-label { margin-top: 24px; }
 
-    .why-section { padding: 48px 0 44px; }
-    .why-head h2 { font-size: 26px; }
-    .why-video { width: 260px; }
+    .who-intro-video { max-width: 100%; }
+    .who-badges { max-width: 100%; padding: 0 22px; }
     .stat-badge { max-width: 130px; padding: 10px 13px; }
     .stat-badge .num { font-size: 15px; }
     .stat-badge .lbl { font-size: 12px; }
-    .badge-years { left: -6px; }
-    .badge-followers { right: -6px; }
 
     .portfolio-section { padding: 48px 0 44px; }
     .portfolio-head h2 { font-size: 24px; }
@@ -453,9 +434,7 @@
     .hero-center { height: 260px; margin-top: 24px; margin-bottom: 28px; }
     .phone-big { width: 136px; height: 260px; }
     .phone-small { width: 88px; height: 166px; left: -56px; right: auto; bottom: -10px; }
-    .why-video { width: 220px; }
-    .stat-badge { position: static; transform: none !important; margin: 10px auto; display: block; max-width: 220px; }
-    .why-stage { flex-direction: column; align-items: center; gap: 4px; }
+    .who-badges { flex-direction: column; align-items: center; gap: 12px; }
     .video-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .who-card { padding: 16px; }
   }
@@ -516,15 +495,13 @@
   <section class="who-section">
     <div class="who-head"><h2>The human behind the camera</h2></div>
     <div class="who-hook">American expat in Greece — with a U.S. shipping address, so distance is never the problem.</div>
-    <div class="why-stage" style="max-width: 680px; margin: 0 auto 36px;">
-      <div class="stat-badge badge-years">
+    <video class="who-intro-video" src="https://pub-13f65948eb684575b8fa44f121ee04d8.r2.dev/IntroVideo.MP4" controls playsinline></video>
+    <div class="who-badges">
+      <div class="stat-badge">
         <div class="stat-num-row"><span class="num">10 years</span></div>
         <div class="lbl">building an online audience</div>
       </div>
-      <div class="why-video">
-        <video src="https://pub-13f65948eb684575b8fa44f121ee04d8.r2.dev/IntroVideo.MP4" controls playsinline></video>
-      </div>
-      <div class="stat-badge badge-followers">
+      <div class="stat-badge">
         <div class="stat-num-row">
           <span class="num">58K</span>
           <a class="stat-icon" href="https://www.facebook.com/awelltraveledmom/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20v-7h3l.5-3.5H14V7.5C14 6.3 14.3 5.5 16 5.5h1.7V2.3C17.4 2.2 16.2 2 14.9 2 12 2 10.5 3.7 10.5 6.8V9.5H7.5V13h3v7h3.5z"/></svg></a>
@@ -555,22 +532,6 @@
         <div class="who-text">
           Yes, I <strong>bribe my kid</strong> to be in my videos. Yes, it works.
           <span class="sidekick-sub">If your audience is parents of 8–12-year-olds, we've already got the cast. (His rate: Robux or snacks.)</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WHY WORK WITH ME ============ -->
-  <section class="why-section">
-    <div class="wrap" style="padding:0;">
-      <div class="why-head">
-        <div class="eyebrow">Why work with me</div>
-        <h2>Just hit play.</h2>
-      </div>
-
-      <div class="why-stage">
-        <div class="why-video">
-          <div class="why-video-placeholder">Your intro video here<br>(full Vimeo embed)</div>
         </div>
       </div>
     </div>
